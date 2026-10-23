@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="460.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
+<BorderPane prefHeight="620.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
 
     <top>
         <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 15px;" text="Farm Drone Managment System" />
@@ -45,9 +45,30 @@
                 </VBox>
             </VBox>
 
-            <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+            <VBox minWidth="280.0" spacing="8.0" HBox.hgrow="ALWAYS">
                 <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Messages Log:" />
                 <TextArea fx:id="statusArea" editable="false" prefHeight="220.0" promptText="Status messages will appear here..." VBox.vgrow="ALWAYS" wrapText="true" />
+            </VBox>
+
+            <VBox prefWidth="230.0" spacing="12.0">
+                <VBox minHeight="230.0" prefHeight="230.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 14;">
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Recent Alerts" />
+                    <Separator />
+                    <Label text="Field #" />
+                    <Label text="Drone #" />
+                    <Label text="Drone #" />
+                </VBox>
+
+                <VBox minHeight="230.0" prefHeight="230.0" spacing="6.0" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 14;">
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Today's Data" />
+                    <Separator />
+                    <Label text="Soil moisture: %" />
+                    <Label text="Crop health: %" />
+                    <Label text="Active drones:" />
+                    <Label text="Ready to harvest: # fields" wrapText="true" />
+                    <Label text="Temp # F" />
+                    <Label text="Humidity 75%" />
+                </VBox>
             </VBox>
         </HBox>
     </center>

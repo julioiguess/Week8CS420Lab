@@ -3,8 +3,6 @@ package application;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 
 public class DashboardController {
 
@@ -18,15 +16,6 @@ public class DashboardController {
     private void initialize() {
         optionCombo.getItems().addAll("Overview", "Farm Map", "Soil Moisture", "Crop Growth","Harvest","Equipment", "Drone Missions", "Alerts");
         optionCombo.setValue("Select Option");
-    }
-
-    @FXML
-    private void initialize() {
-        soilChart.setTitle("Soil Monitoring");
-        final NumberAxis xAxis = new NumberAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Days");
-        yAxis.setLabel("Soil percentage (%)");
     }
 
     @FXML
